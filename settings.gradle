@@ -1,0 +1,2 @@
+rootProject.name = "Hero Kotlin"
+include ':app'
