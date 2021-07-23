@@ -37,7 +37,7 @@ object HeroesData {
         R.drawable.sudirman,
         R.drawable.sukarno,
         R.drawable.supomo,
-        R.drawable.supomo,
+        R.drawable.tan_malaka
     )
 
     val listData: ArrayList<Hero>
