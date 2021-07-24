@@ -14,6 +14,16 @@ import com.bumptech.glide.request.RequestOptions
 class CardViewHeroAdapter(private val listHero: ArrayList<Hero>) :
     RecyclerView.Adapter<CardViewHeroAdapter.CardViewHolder>() {
 
+    private lateinit var onItemClickCallback: OnItemClickCallback
+
+    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
+        this.onItemClickCallback = onItemClickCallback
+    }
+
+    interface OnItemClickCallback {
+        fun onItemClicked(data: Hero)
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardViewHolder {
         val view: View = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_cardview_hero, parent, false)
@@ -42,6 +52,10 @@ class CardViewHeroAdapter(private val listHero: ArrayList<Hero>) :
 
         holder.itemView.setOnClickListener {
             showToast(holder, "Kamu memilih")
+        }
+
+        holder.itemView.setOnClickListener {
+            onItemClickCallback.onItemClicked(listHero[holder.adapterPosition])
         }
     }
 

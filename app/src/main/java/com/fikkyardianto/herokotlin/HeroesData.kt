@@ -6,7 +6,7 @@ object HeroesData {
         "Ahmad Yani",
         "Sutomo",
         "Gatot Soebroto",
-        "Ki Hadjar Dewantarai",
+        "Ki Hadjar Dewantara",
         "Mohammad Hatta",
         "Soedirman",
         "Soekarno",
